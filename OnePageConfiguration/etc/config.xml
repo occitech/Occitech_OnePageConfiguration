@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Occitech_OnePageConfiguration>
+            <version>0.0.1</version>
+        </Occitech_OnePageConfiguration>
+    </modules>
+    <global>
+        <models>
+            <occitech_one_page_configuration>
+                <class>Occitech_OnePageConfiguration_Model</class>
+                <resourceModel>occitech_one_page_configuration_resource</resourceModel>
+            </occitech_one_page_configuration>
+            <occitech_one_page_configuration_resource>
+                <class>Occitech_OnePageConfiguration_Model_Resource</class>
+            </occitech_one_page_configuration_resource>
+        </models>
+        <blocks>
+            <occitech_one_page_configuration>
+                <class>Occitech_OnePageConfiguration_Block</class>
+            </occitech_one_page_configuration>
+        </blocks>
+        <helpers>
+            <occitech_one_page_configuration>
+                <class>Occitech_OnePageConfiguration_Helper</class>
+            </occitech_one_page_configuration>
+        </helpers>
+    </global>
+</config>
