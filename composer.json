@@ -1,0 +1,12 @@
+{
+    "name": "occitech/one_page_configuration",
+    "description": "One page configuration",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Occitech",
+            "email": "contact@occitech.fr"
+        }
+    ],
+    "minimum-stability": "dev"
+}
