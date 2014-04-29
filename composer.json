@@ -1,5 +1,6 @@
 {
     "name": "occitech/one_page_configuration",
+    "type": "magento-module",
     "description": "One page configuration",
     "license": "MIT",
     "authors": [
@@ -8,5 +9,8 @@
             "email": "contact@occitech.fr"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "magento-hackathon/magento-composer-installer":"*"
+    }
 }
