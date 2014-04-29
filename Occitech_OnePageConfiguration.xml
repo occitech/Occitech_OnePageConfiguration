@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Occitech_OnePageConfiguration>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Occitech_OnePageConfiguration>
+    </modules>
+</config>
