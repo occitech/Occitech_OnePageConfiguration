@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <config>
     <sections>
         <one_page_configuration translate="label">
@@ -13,15 +14,487 @@
                 <informations_generales translate="label">
                     <label>Informations générales</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>100</sort_order>
+                    <sort_order>5</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <expanded>1</expanded>
+                    <fields>
+                        <address translate="label">
+                            <label>Store Contact Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>general/store_information/address</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </address>
+                        <store_name translate="label">
+                            <label>Store Name</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>general/store_information/name</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </store_name>
+                        <phone translate="label">
+                            <label>Store Contact Telephone</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>general/store_information/phone</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </phone>
+                        <merchant_vat_number translate="label">
+                            <label>VAT Number</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>general/store_information/merchant_vat_number</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </merchant_vat_number>
+                        <merchant_country translate="label">
+                            <label>Country</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <config_path>general/store_information/merchant_country</config_path>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </merchant_country>
+                        <copyright translate="label">
+                            <label>Copyright</label>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>design/footer/copyright</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </copyright>
+                        <absolute_footer translate="label comment">
+                            <label>Miscellaneous HTML</label>
+                            <comment>This will be displayed just before body closing tag.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>design/footer/absolute_footer</config_path>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </absolute_footer>
+                    </fields>
+                </informations_generales>
+                <ident_general translate="label">
+                    <label>General Contact</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <email translate="label">
+                            <label>Sender Email</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-email</validate>
+                            <config_path>trans_email/ident_general/email</config_path>
+                            <backend_model>adminhtml/system_config_backend_email_address</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email>
+                        <name translate="label">
+                            <label>Sender Name</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>trans_email/ident_general/name</config_path>
+                            <backend_model>adminhtml/system_config_backend_email_sender</backend_model>
+                            <validate>validate-emailSender</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+                    </fields>
+                </ident_general>
+                <ident_sales translate="label">
+                    <label>Sales Representative</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <email translate="label">
+                            <label>Sender Email</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>trans_email/ident_sales/email</config_path>
+                            <validate>validate-email</validate>
+                            <backend_model>adminhtml/system_config_backend_email_address</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email>
+                        <name translate="label">
+                            <label>Sender Name</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>trans_email/ident_sales/name</config_path>
+                            <backend_model>adminhtml/system_config_backend_email_sender</backend_model>
+                            <validate>validate-emailSender</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+                    </fields>
+                </ident_sales>
+                <ident_support translate="label">
+                    <label>Customer Support</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <email translate="label">
+                            <label>Sender Email</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>trans_email/ident_support/email</config_path>
+                            <validate>validate-email</validate>
+                            <backend_model>adminhtml/system_config_backend_email_address</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email>
+                        <name translate="label">
+                            <label>Sender Name</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>trans_email/ident_support/name</config_path>
+                            <backend_model>adminhtml/system_config_backend_email_sender</backend_model>
+                            <validate>validate-emailSender</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+                    </fields>
+                </ident_support>
+                <localisation>
+                    <label>Localisation</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>25</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <default translate="label">
+                            <label>Default Country</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <config_path>general/country/default</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default>
+                        <code translate="label">
+                            <label>Locale</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_locale</source_model>
+                            <config_path>general/locale/code</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </code>
+                        <timezone translate="label">
+                            <label>Timezone</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_locale_timezone</source_model>
+                            <backend_model>adminhtml/system_config_backend_locale_timezone</backend_model>
+                            <config_path>general/locale/timezone</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </timezone>
+                        <firstday translate="label">
+                            <label>First Day of Week</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_locale_weekdays</source_model>
+                            <config_path>general/locale/firstday</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </firstday>
+                    </fields>
+                </localisation>
+                <theme_design>
+                    <label>Thème et design</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <shortcut_icon translate="label comment">
+                            <label>Favicon Icon</label>
+                            <comment>Allowed file types: ICO, PNG, GIF, JPG, JPEG, APNG, SVG. Not all browsers support all these formats!</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image_favicon</backend_model>
+                            <base_url type="media" scope_info="1">favicon</base_url>
+                            <config_path>design/head/shortcut_icon</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shortcut_icon>
+                        <default_title translate="label">
+                            <label>Default Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/head/default_title</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_title>
+                        <logo_src translate="label">
+                            <label>Logo Image Src</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/header/logo_src</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_src>
+                        <logo_alt translate="label">
+                            <label>Logo Image Alt</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/header/logo_alt</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_alt>
+                        <logo_src_small translate="label">
+                            <label>Small Logo Image Src</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/header/logo_src_small</config_path>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_src_small>
+                        <welcome translate="label">
+                            <label>Welcome Text</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/header/welcome</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </welcome>
+                    </fields>
+                </theme_design>
+               <!--  <customer_configuration>
+                    <label>Configuration client</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>35</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
                     <fields>
 
                     </fields>
-                </informations_generales>
+                </customer_configuration> -->
+<!--                  <product_configuration>
+                     <label>Configuration produits</label>
+                     <frontend_type>text</frontend_type>
+                     <sort_order>40</sort_order>
+                     <show_in_default>1</show_in_default>
+                     <show_in_website>1</show_in_website>
+                     <show_in_store>1</show_in_store>
+                     <fields>
+
+                     </fields>
+                 </product_configuration> -->
+                <tax_configuration_cart>
+                    <label>Configuration des taxes pour le panier</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>45</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <type translate="label">
+                            <label>Display Product Prices In Catalog</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/display/type</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </type>
+                        <shipping translate="label">
+                            <label>Display Shipping Prices</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/display/shipping</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping>
+                        <price translate="label">
+                            <label>Display Prices</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/cart_display/price</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price>
+                        <subtotal translate="label">
+                            <label>Display Subtotal</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/cart_display/subtotal</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </subtotal>
+                        <shipping translate="label">
+                            <label>Display Shipping Amount</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/cart_display/shipping</config_path>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping>
+                        <grandtotal translate="label">
+                            <label>Include Tax In Grand Total</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/cart_display/grandtotal</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grandtotal>
+                        <full_summary translate="label">
+                            <label>Display Full Tax Summary</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/cart_display/full_summary</config_path>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </full_summary>
+                         <zero_tax translate="label">
+                            <label>Display Zero Tax Subtotal</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/cart_display/zero_tax</config_path>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zero_tax>
+                    </fields>
+                </tax_configuration_cart>
+                <tax_configuration_invoices>
+                    <label>Configuration des taxes pour les commandes, factures</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <price translate="label">
+                            <label>Display Prices</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/sales_display/price</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price>
+                        <subtotal translate="label">
+                            <label>Display Subtotal</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/sales_display/subtotal</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </subtotal>
+                        <shipping translate="label">
+                            <label>Display Shipping Amount</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>tax/system_config_source_tax_display_type</source_model>
+                            <backend_model>tax/config_notification</backend_model>
+                            <config_path>tax/sales_display/shipping</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping>
+                        <grandtotal translate="label">
+                            <label>Include Tax In Grand Total</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/sales_display/grandtotal</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grandtotal>
+                        <full_summary translate="label">
+                            <label>Display Full Tax Summary</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/sales_display/full_summary</config_path>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </full_summary>
+                         <zero_tax translate="label">
+                            <label>Display Zero Tax Subtotal</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>tax/sales_display/zero_tax</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zero_tax>
+                    </fields>
+                </tax_configuration_invoices>
             </groups>
         </one_page_configuration>
     </sections>
