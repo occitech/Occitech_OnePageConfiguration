@@ -11,8 +11,8 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <informations_generales translate="label">
-                    <label>Informations générales</label>
+                <store_information translate="label">
+                    <label>Store Information</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>5</sort_order>
                     <show_in_default>1</show_in_default>
@@ -90,7 +90,7 @@
                             <show_in_store>1</show_in_store>
                         </absolute_footer>
                     </fields>
-                </informations_generales>
+                </store_information>
                 <ident_general translate="label">
                     <label>General Contact</label>
                     <frontend_type>text</frontend_type>
@@ -187,7 +187,7 @@
                         </name>
                     </fields>
                 </ident_support>
-                <localisation>
+                <localisation translate="label">
                     <label>Localisation</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>25</sort_order>
@@ -238,7 +238,7 @@
                         </firstday>
                     </fields>
                 </localisation>
-                <theme_design>
+                <theme_design translate="label">
                     <label>Thème et design</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>30</sort_order>
@@ -246,6 +246,44 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+                        <name translate="label">
+                            <label>Current Package Name</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_design_package</backend_model>
+                            <config_path>design/package/name</config_path>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>
+                        <ua_regexp translate="comment">
+                            <label></label>
+                            <frontend_model>adminhtml/system_config_form_field_regexceptions</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_design_exception</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Match expressions in the same order as displayed in the configuration.</comment>
+                        </ua_regexp>
+                        <default translate="label">
+                            <label>Default</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/theme/default</config_path>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default>
+                        <default_ua_regexp translate="comment">
+                            <label></label>
+                            <frontend_model>adminhtml/system_config_form_field_regexceptions</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_ua_regexp>
                         <shortcut_icon translate="label comment">
                             <label>Favicon Icon</label>
                             <comment>Allowed file types: ICO, PNG, GIF, JPG, JPEG, APNG, SVG. Not all browsers support all these formats!</comment>
@@ -258,15 +296,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </shortcut_icon>
-                        <default_title translate="label">
-                            <label>Default Title</label>
-                            <frontend_type>text</frontend_type>
-                            <config_path>design/head/default_title</config_path>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </default_title>
                         <logo_src translate="label">
                             <label>Logo Image Src</label>
                             <frontend_type>text</frontend_type>
@@ -327,7 +356,7 @@
 
                      </fields>
                  </product_configuration> -->
-                <tax_configuration_cart>
+                <tax_configuration_cart translate="label">
                     <label>Configuration des taxes pour le panier</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>45</sort_order>
@@ -422,7 +451,7 @@
                         </zero_tax>
                     </fields>
                 </tax_configuration_cart>
-                <tax_configuration_sales>
+                <tax_configuration_sales translate="label">
                     <label>Configuration des taxes pour les commandes, factures</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>50</sort_order>
@@ -495,7 +524,7 @@
                         </zero_tax>
                     </fields>
                 </tax_configuration_sales>
-                <sales_configuration>
+                <sales_configuration translate="label">
                     <label>Configuration des ventes</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>55</sort_order>
@@ -571,7 +600,7 @@
                         </checkout_multiple>
                     </fields>
                 </sales_configuration>
-                <seo_configuration>
+                <seo_configuration translate="label">
                     <label>Configuration SEO</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>60</sort_order>
@@ -589,9 +618,36 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </use_rewrites>
+                        <title_suffix translate="label">
+                            <label>Title Suffix</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>14</sort_order>
+                            <config_path>design/head/title_suffix</config_path>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title_suffix>
+                        <default_title translate="label">
+                            <label>Default Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>design/head/default_title</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_title>
+                        <default_description translate="label">
+                            <label>Default Description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>design/head/default_description</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_description>
                     </fields>
                 </seo_configuration>
-                <stock_configuration>
+                <stock_configuration translate="label">
                     <label>Configuration du stock</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>65</sort_order>
@@ -623,17 +679,207 @@
 
                     </fields>
                 </app_configuration> -->
-                <payment_method>
-                    <label>Configuration de l'application</label>
+                <payment_method_banktransfer translate="label">
+                    <label>Méthode de paiement : virement banquaire</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>70</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/banktransfer/active</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/banktransfer/title</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <order_status translate="label">
+                            <label>New Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status_new</source_model>
+                            <config_path>payment/banktransfer/order_status</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/banktransfer/allowspecific</config_path>
+                            <sort_order>20</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/banktransfer/specificcountry</config_path>
+                            <sort_order>25</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+                        <instructions translate="label">
+                            <label>Instructions</label>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>payment/banktransfer/instructions</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </instructions>
+                        <min_order_total translate="label">
+                            <label>Minimum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/banktransfer/min_order_total</config_path>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </min_order_total>
+                        <max_order_total translate="label">
+                            <label>Maximum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/banktransfer/max_order_total</config_path>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_order_total>
+                        <sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/banktransfer/sort_order</config_path>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
                     </fields>
-                </payment_method>
+                </payment_method_banktransfer>
+                <payment_method_checkmo translate="label">
+                    <label>Méthode de paiement : chèque / mandat</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>75</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/checkmo/active</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <order_status translate="label">
+                            <label>New Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status_new</source_model>
+                            <config_path>payment/checkmo/order_status</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/checkmo/sort_order</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_class>validate-number</frontend_class>
+                        </sort_order>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/checkmo/title</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                         <allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/checkmo/allowspecific</config_path>
+                            <sort_order>25</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/checkmo/specificcountry</config_path>
+                            <sort_order>30</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+                        <payable_to translate="label">
+                            <label>Make Check Payable to</label>
+                            <config_path>payment/checkmo/payable_to</config_path>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </payable_to>
+                        <mailing_address translate="label">
+                            <label>Send Check to</label>
+                            <frontend_type>textarea</frontend_type>
+                            <config_path>payment/checkmo/mailing_address</config_path>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mailing_address>
+                        <min_order_total translate="label">
+                            <label>Minimum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/checkmo/min_order_total</config_path>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </min_order_total>
+                        <max_order_total translate="label">
+                            <label>Maximum Order Total</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/checkmo/max_order_total</config_path>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_order_total>
+                    </fields>
+                </payment_method_checkmo>
             </groups>
         </one_page_configuration>
     </sections>
