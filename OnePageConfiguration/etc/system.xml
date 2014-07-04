@@ -422,7 +422,7 @@
                         </zero_tax>
                     </fields>
                 </tax_configuration_cart>
-                <tax_configuration_invoices>
+                <tax_configuration_sales>
                     <label>Configuration des taxes pour les commandes, factures</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>50</sort_order>
@@ -494,7 +494,146 @@
                             <show_in_store>1</show_in_store>
                         </zero_tax>
                     </fields>
-                </tax_configuration_invoices>
+                </tax_configuration_sales>
+                <sales_configuration>
+                    <label>Configuration des ventes</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>55</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <country_id translate="label">
+                            <label>Country</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_class>countries</frontend_class>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <config_path>shipping/origin/country_id</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </country_id>
+                        <region_id translate="label">
+                            <label>Region/State</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>shipping/origin/region_id</config_path>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </region_id>
+                        <postcode translate="label">
+                            <label>ZIP/Postal Code</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>shipping/origin/postcode</config_path>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </postcode>
+                        <city translate="label">
+                            <label>City</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>shipping/origin/city</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </city>
+                        <street_line1 translate="label">
+                            <label>Street Address</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>shipping/origin/street_line1</config_path>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </street_line1>
+                        <street_line2 translate="label">
+                            <label>Street Address Line 2</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>shipping/origin/street_line2</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </street_line2>
+                        <checkout_multiple translate="label">
+                            <label>Allow Shipping to Multiple Addresses</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>shipping/option/checkout_multiple</config_path>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </checkout_multiple>
+                    </fields>
+                </sales_configuration>
+                <seo_configuration>
+                    <label>Configuration SEO</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <use_rewrites translate="label">
+                            <label>Use Web Server Rewrites</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>web/seo/use_rewrites</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_rewrites>
+                    </fields>
+                </seo_configuration>
+                <stock_configuration>
+                    <label>Configuration du stock</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>65</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <manage_stock translate="label">
+                            <label>Manage Stock</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <backend_model>adminhtml/system_config_backend_catalog_inventory_managestock</backend_model>
+                            <config_path>cataloginventory/item_options/manage_stock</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </manage_stock>
+                    </fields>
+                </stock_configuration>
+                <!-- <app_configuration>
+                    <label>Configuration de l'application</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                    </fields>
+                </app_configuration> -->
+                <payment_method>
+                    <label>Configuration de l'application</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                    </fields>
+                </payment_method>
             </groups>
         </one_page_configuration>
     </sections>
