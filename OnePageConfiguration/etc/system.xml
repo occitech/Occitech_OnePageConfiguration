@@ -535,7 +535,7 @@
                         <country_id translate="label">
                             <label>Country</label>
                             <frontend_type>select</frontend_type>
-                            <frontend_class>countries</frontend_class>
+                            <!-- <frontend_class>countries</frontend_class> TOFIX -->
                             <source_model>adminhtml/system_config_source_country</source_model>
                             <config_path>shipping/origin/country_id</config_path>
                             <sort_order>5</sort_order>
