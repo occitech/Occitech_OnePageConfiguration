@@ -347,7 +347,6 @@
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <backend_model>occitech_one_page_configuration/region</backend_model>
-                            <config_path></config_path>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -689,7 +688,7 @@
 
                     </fields>
                 </app_configuration> -->
-                <payment_method_banktransfer translate="label">
+<!--                 <payment_method_banktransfer translate="label">
                     <label>Méthode de paiement : virement banquaire</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>70</sort_order>
@@ -784,8 +783,8 @@
                             <show_in_store>0</show_in_store>
                         </sort_order>
                     </fields>
-                </payment_method_banktransfer>
-                <payment_method_checkmo translate="label">
+                </payment_method_banktransfer> -->
+                <!-- <payment_method_checkmo translate="label">
                     <label>Méthode de paiement : chèque / mandat</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>75</sort_order>
@@ -889,7 +888,7 @@
                             <show_in_store>0</show_in_store>
                         </max_order_total>
                     </fields>
-                </payment_method_checkmo>
+                </payment_method_checkmo> -->
             </groups>
         </one_page_configuration>
     </sections>
