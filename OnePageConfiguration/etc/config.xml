@@ -9,11 +9,7 @@
         <models>
             <occitech_one_page_configuration>
                 <class>Occitech_OnePageConfiguration_Model</class>
-                <resourceModel>occitech_one_page_configuration_resource</resourceModel>
             </occitech_one_page_configuration>
-            <occitech_one_page_configuration_resource>
-                <class>Occitech_OnePageConfiguration_Model_Resource</class>
-            </occitech_one_page_configuration_resource>
         </models>
         <blocks>
             <occitech_one_page_configuration>
